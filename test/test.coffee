@@ -77,7 +77,7 @@ describe 'livedb', ->
     @client.destroy()
     @db.close()
 
-  describe.only 'submit', ->
+  describe 'submit', ->
     it 'creates a doc', (done) ->
       @collection.submit @docName, {v:0, create:{type:'text'}}, (err) ->
         throw new Error err if err
@@ -296,7 +296,7 @@ describe 'livedb', ->
         assert.strictEqual v, 1
         done()
 
-  describe 'bulk fetch', ->
+  describe.skip 'bulk fetch', ->
     it 'can fetch created documents', (done) -> @create 'hi', =>
       request = {}
       request[@cName] = [@docName]
@@ -477,7 +477,7 @@ describe 'livedb', ->
 
     it 'errors if ops are missing from the snapshotdb and oplogs'
 
-  describe 'bulkGetOpsSince', ->
+  describe.skip 'bulkGetOpsSince', ->
     # This isn't really an external API, but there is a tricky edge case which
     # can come up that its hard to recreate using bulkSubscribe directly.
     it 'handles multiple gets which are missing from redis correctly', (done) -> # regression
