@@ -1,0 +1,21 @@
+{
+  "name": "livedb-foundation",
+  "version": "0.0.0",
+  "description": "LiveDB implemented on top of foundationdb",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "JSONStream": "~0.7.1",
+    "fdb": "~1.0.1",
+    "ottypes": "~1.0.1",
+    "sinon": "~1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Gentle <me@josephg.com>",
+  "license": "MIT"
+}
